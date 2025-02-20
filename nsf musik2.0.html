@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Музыкальный сайт</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Занимает всю высоту экрана */
+            margin: 0; /* Убирает отступы */
+            background-color: #f0f0f0; /* Цвет фона страницы */
+        }
+
+        #playButton {
+            font-size: 30px; /* Размер текста */
+            width: 350px; /* Ширина кнопки */
+            height: 350px; /* Высота кнопки */
+            background-color: #4CAF50; /* Цвет фона */
+            color: white; /* Цвет текста */
+            border: none; /* Убираем рамку */
+            border-radius: 50%; /* Делаем кнопку круглой */
+            cursor: pointer; /* Указатель при наведении */
+            display: flex;
+            justify-content: center;
+            align-items: center; /* Центрируем текст внутри кнопки */
+        }
+
+        #playButton:hover {
+            background-color: #45a049; /* Цвет фона при наведении */
+        }
+    </style>
+</head>
+<body>
+
+    <h1 style="display: none;">Нажми на кнопочку</h1>
+   
+    <button id="playButton">Пенис</button>
+    <audio id="music" src="my_musik.mp3"></audio>
+
+    <script>
+        const button = document.getElementById('playButton');
+        const music = document.getElementById('music');
+
+        button.addEventListener('click', () => {
+            music.play();
+        });
+    </script>
+</body>
+</html>
